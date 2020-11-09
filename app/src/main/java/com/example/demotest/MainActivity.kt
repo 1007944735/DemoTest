@@ -13,5 +13,6 @@ class MainActivity : AppCompatActivity() {
         print("123")
         print("测试")
         print("分支测试")
+        print("测试2")
     }
 }
