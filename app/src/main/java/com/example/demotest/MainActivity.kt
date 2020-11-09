@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
         Log.i("TAG", "onCreate: ")
         print("23")
         print("123")
+<<<<<<< Updated upstream
         print("测试")
+=======
+        print("分支测试")
+>>>>>>> Stashed changes
     }
 }
