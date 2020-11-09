@@ -11,5 +11,6 @@ class MainActivity : AppCompatActivity() {
         Log.i("TAG", "onCreate: ")
         print("23")
         print("123")
+        print("测试")
     }
 }
