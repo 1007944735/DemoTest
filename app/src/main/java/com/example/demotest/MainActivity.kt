@@ -18,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         databind = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         print("123")
+        print("chongchong")
     }
 }
