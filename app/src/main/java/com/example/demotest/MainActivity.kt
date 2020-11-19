@@ -1,13 +1,12 @@
 package com.example.demotest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.demotest.databinding.ActivityMainBinding
+import kotlinx.coroutines.*
+import kotlin.system.measureTimeMillis
 
 class MainActivity : AppCompatActivity() {
     lateinit var databind: ActivityMainBinding
@@ -17,7 +16,24 @@ class MainActivity : AppCompatActivity() {
 
         databind = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        print("123")
-        print("chongchong")
+//        val customer=Customer()
+//        customer.buy(500.0)
+//        System.out.println("客户需要付钱：" + customer.callLastAmount())
+//        customer.buy(1200.0)
+//        System.out.println("客户需要付钱：" + customer.callLastAmount())
+//        customer.buy(1200.0)
+//        System.out.println("客户需要付钱：" + customer.callLastAmount())
+//        customer.buy(1200.0)
+//        System.out.println("客户需要付钱：" + customer.callLastAmount())
+        GlobalScope.launch{
+            val result=async {
+                delay(2000)
+                10
+            }
+
+            val value=result.await()
+            Log.d("TAG", "onCreate: "+value)
+        }
+
     }
 }
